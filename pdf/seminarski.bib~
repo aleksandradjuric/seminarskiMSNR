@@ -1,0 +1,42 @@
+
+@book{fuzzing,
+  title={{Fuzzing for Software Security Testing and Quality Assurance}},
+  author={Ari Takanen, Jared D. Demott, Charles Miller},
+  isbn={1596932147},
+  url={http://www.amazon.com/Fuzzing-Software-Security-Assurance-Information/dp/1596932147},
+  year={2008},
+  publisher={Artech House}
+}
+
+@book{fuzzingBruteForce,
+  title={{Fuzzing: Brute Force Vulnerability Discovery}},
+  author={Michael Sutton, Adam Greene, Pedram Amini},
+  isbn={0321446119},
+  url={http://www.amazon.com/Fuzzing-Brute-Force-Vulnerability-Discovery/dp/0321446119},
+  year={2007},
+  publisher={Addison-Wesley Professional}
+}
+
+
+@misc{agilnirazvoj,
+title = {{Agilni razvoj, testovi}},
+note = {on-line at: \url{http://poincare.matf.bg.ac.rs/~smalkov/files/rs.r290.2015/public/Predavanja/Razvoj%20softvera.2015.05%20-%20Agilni%20razvoj,%20Testovi.pdf}},
+    author = {Saša Malkov},
+    year = {2013}
+}
+
+
+@article{haltingproblem,
+    author = {Turing, A. M.},
+    citeulike-article-id = {155758},
+    journal = {Proceedings of the London Mathematical Society},
+    keywords = {computability, entscheidungsproblem, turing},
+    number = {42},
+    pages = {230--265},
+    posted-at = {2005-04-08 18:11:59},
+    priority = {0},
+    title = {{On Computable Numbers, with an application to the Entscheidungsproblem}},
+    volume = {2},
+    year = {1936}
+}
+
