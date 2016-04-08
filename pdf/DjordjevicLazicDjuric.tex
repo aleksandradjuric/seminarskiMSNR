@@ -1,5 +1,3 @@
-% !TEX encoding = UTF-8 Unicode
-
 \documentclass[a4paper]{article}
 
 \usepackage{color}
@@ -23,11 +21,11 @@
 \maketitle
 
 \abstract{
-%tekst apstrakta
+ %tekst apstrakta
 \tableofcontents
-
+ 
 \newpage
-
+ 
 \section{Uvod}
 \label{sec:uvod}
 % tekst uvoda
@@ -35,24 +33,90 @@
 \section{Testiranje}
 \label{sec:testiranje}
 
-Testiranje predstavlja važan deo životnog ciklusa razvoja softvera. Testiranjem se lakše uočavaju greške i propusti nastali prilikom implementacije. Pored toga ono predstavlja i jedan od načina specifikacije problema. Zbog prednosti koje se dobijaju čestim i redovnim testiranjem najzastupljenije i trenutno najpopularnije metodologije razvoja promovišu paralelno pisanje testova i implementacije softvera. Ekstremno programiranje kao jedan od predstavnika agilnih metodologija posebno ističe razvoj vođen testovima i pisanje testova prihvatljivosti \cite{agilnirazvoj}.
+Testiranje predstavlja važan deo životnog ciklusa razvoja softvera. Testiranjem se lakše uočavaju greške i propusti nastali prilikom implementacije. Pored toga ono predstavlja i jedan od načina specifikacije problema. 
+Kako i najmanji problem može uništiti uložen trud, u slučaju obimnih projekata nikada nije dovoljno testiranja.
+S porastom složenosti projekta raste i značaj testiranja i provera softvera kako bi se izbegli ishodi koju mogu da unište ceo projekat.
+S obzirom da se greške ne mogu izbeći, potrebno ih je što je moguće ranije otkriti kako bi njihovo otklanjanje
+bilo brže i jeftinije. Zbog prednosti koje se dobijaju najzastupljenije i trenutno najpopularnije metodologije razvoja promovišu paralelno pisanje testova i implementacije softvera. Ekstremno programiranje kao jedan od predstavnika agilnih metodologija posebno ističe razvoj vođen testovima i pisanje testova prihvatljivosti \cite{agilnirazvoj}.
+Testiranje se sastoji od planiranja testiranja, gde se određuje predmet, cilj i razlog testiranja, zatim sledi dizajn testova koji određuje kako se sprovodi testiranje na osnovu test primera. Treća faza je implementacija testova iza koje sledi izvršavanje testova radi provere funkcionalnosti sistema. Kao poslednja faza se definiše evaluacija testova koja uključuje validnost izvršavanja testa, analizu izlaza i pregled dobijenih rezultata.
 
 
 \subsection{Vrste testiranja}
 \label{subsec:vrste_testiranja}
+Testiranje se može izvoditi na različite načine. Čest pristup je testiranje jedinice (eng~{\em Unit test}) gde se zasebno testira svaka programska 
+komponenta, nezavisno od ostalih delova sistema. Takvo testiranje se može vršiti na podprogramima ili celinama sačinjenim od manjih komponenti.
+U upotrebi je i integraciono testiranje kao proces verifikovanja spregnutosti među komponentama sistema. Uobičajene strategije integralnog testiranja se koriste kod hijerarhijski strukturiranog softvera. Savremene integrativne strategije više pažnje posvećuju arhitekturi sistema. Koristi se i sistemsko testiranje koje proverava ponašanje celog sistema uključujući aspekte kao što su bezbednost, brzina, preciznost ili performanse. Interfejsi ka drugim aplikacijama, pomoćnim programima, hardverskim uređajima ili okruženjima se takođe razmatra na ovom nivou.
+Veoma zastupljeni su i testovi prihvatljivosti koji proveravaju ponašanje sistema prema zahtevima narucioca softvera. Narucilac formira tipične zadatke za koje se proverava ispunjenost zahteva. Pored toga, razlikujemo i instalaciono testiranje koje podrazumeva proveru softvera 
+nakon instalacije u ciljnom okruženju. Instalaciono testiranje može se izvoditi prema zahtevima hardverske konfiguracije. Značajno je i regresiono testiranje koje testira sistem u ciklusima kako bi se proverilo da promene
+nisu proizvele neželjene efekte. Regresioni testovi obezbeđuju da performanse novog sistema budu barem jednake performansama starog.
+Konačno, primenjuje se i testiranje performansi koje uključuje proveru kapaciteta i vremena odziva. 
  
 \subsection{Fuzz testiranje}
 \label{subsec:fuzz_testiranje}
+Fuzz testiranje je jedan od pristupa otkrivanja slabosti softvera zasnovana na tehnikama testiranja crne ili sive kutije (eng~{\em Black Box Testing}, (eng~{\em Grey Box Testing})). Pored navedenih strategija testiranja 
+postoji i strategija testiranja bele kutije, pa je važno prepoznati 
+u konkretnim situacijama najpogodniji pristup.
+Strategija testiranja bele kutije zahteva pristup izvornom kodu. Obuhvata testiranje kontrole toka i testiranje putanja. Sve moguće putanje koda mogu biti predmet revizije za potencijalne slabosti.
+Alati za analizu izvornog koda nisu savršeni i mogu proizvesti lažne pozitivne rezultate. Iz tog razloga, iskusni programeri moraju identifikovati da li uočeni problemi reprezentuju legitimne slabosti.
+Izvorni kod nije uvek dostupan. Iako je za većinu UNIX projekata dostupan izvorni kod, za Windows okruženja to obično nije slučaj. Bez pristupa izvornom kodu, strategija testiranja belom kutijom nije moguća opcija.
+\\
 
-% Uloga Fuzz testiranja može i iznad (da ne bude poseban podnaslov)
-\subsubsection{Uloga}
-\label{subsubsec:uloga_fuzz_testiranja} 
+Testiranje crnom kutijom je strategija koja
+zahteva da se program posmatra kao zatvoreni sistem kako bi se utvrdilo ponašanje programa na osnovu odgovarajućih ulaznih podataka. Ova strategija, za
+razliku od strategija bele kutije, ne zahteva poznavanje strukture i analizu
+izvornog koda, već samo način funkcionisanja sistema koji se
+testira. Izvršava se tako sto se sistemu prosleđuju odgovarajući ulazni podaci a zatim se proverava da li je izlaz u skladu sa očekivanim načinom funkcionisanja
+sistema. Ova situacija je uobičajena prilikom testiranja web aplikacija ili web servisa gde se razmatra web strana koju je generisao server na osnovu unetih podataka.
+Strategija testiranja crne kutije obično nije najbolji pristup, ali je uvek opcija. Kao prednost ove strategije može se navesti jednostavnost, pošto testiranje može biti vođeno bez poznavanja unutrašnje strukture aplikacije.
+Ulazni podaci za testiranje aplikacije definišu se tako da povećaju verovatnoću nalaženja
+greške i da smanje veličinu skupa testova.
+\\
 
-\subsubsection{Vrste}
-\label{subsubsec:vrste_fuzz_testiranja}
+Fuzz testiranje se ubraja u strategije crne kutije. Definiše se kao analiza graničnih vredosti gde se određuje opseg dozvoljenih vrednosti 
+konkretnog ulaza i kreiraju test vrednosti izvan granica. Fuzz testiranje se ne fokusira samo na granične vrednosti već i na bilo koju ulaznu vrednost koja može izazvati nedefinisano ili nebezbedno ponašanje. Može se definitisati i kao metod otkrivanja grešaka softvera kreiranjem neočekivanih ulaza i upravljanjem izuzecima \cite{fuzzing} \cite{fuzzingBruteForce}.
 
-\subsubsection{Prednosti}
-\label{subsubsec:prednosti_fuzz_testiranja}
+
+\subsubsection{Metode}
+\label{subsubsec:metode_fuzz_testiranja}
+\begin{description}
+\item[Metoda izučavanja ulaznih vrednosti] 
+Razvoj test slučajeva počinje izučavanjem svih podržanih struktura podataka i prihvatljivih opsega vrednosti za svaki od njih. Generišu se granični test uslovi na osnovu kojih se može proceniti preciznost ciljnog sistema. Prednost je mogućnost ponovne upotrebe test slučajeva na drugim implementacijama koje koriste isti protokol ili format fajla.
+\\
+
+\item[Random metoda]
+Ova metoda je najmanje efikasna. Podrazumeva generisanje slučajne vrednosti za testiranje nadajući se najboljem ishodu. Iznenađujuće je da su slabosti kritičnih delova softvera identifikovani upravo ovom metodom. Može biti otežano pronalaženje test primera koji je izazvao 
+prekidanje programa u slučaju velikog broja slučajnih test vrednosti. 
+\\
+
+\item[Fuzz testiranje grubom silom]
+Fuzz tester započinje testiranje ispravnim ulazom, a zatim u svakom sledećem koraku menja svaki individualni byte ili karakter stringa u zavisnosti od tipa fajla. Složeniji ulazi zahtevaju ogroman broj varijacija ulaznih test vrednosti pa u tim slučajevima ne postoji dobra pokrivenost.
+\end{description}
+
+\subsubsection{Tipovi}
+\label{subsubsec:tipovi_fuzz_testiranja}
+\begin{description}
+\item[Udaljeni fuzz testeri  (eng~{\em Remote Fuzzers}) ] su testeri koji osluškuju na mrežnom interfejsu. Slabosti u ovim sistemima mogu dovesti do pristupa osetljivim podacima. Ovde spadaju fuzz testeri za proveru protokola mreže. Većina protokola
+imaju jednostavnu autentikaciju ili ona uopšte ne postoji. Obično su zasnovani na ASCII karakterima. Jednostavni protokoli ne sadrže check sum bitove. Primer jednostavnog mrežnog protokola je FTP, gde sadržaj svih kontrolnih kanala komunikacije predstavlja ASCII tekst. Za autentifikaciju, samo su potrebni korisničko ime i lozinka.
+Kompleksni protokoli su obično rade sa komprimovanim binarnim podacima, a autentifikacija može zahtevati enkripciju.
+\\
+
+\item[Fuzz testeri za web aplikacije] 
+U ovom slučaju slabosti predstavljaju SQL upiti, definisianje XML struktura podataka pa odgovarajući tester mora podržati HTTP protokol.
+\\
+
+\item[Fuzz testeri za pretraživače weba]
+Ovi testeri nisu ograničeni samo na testiranje HTML sadržaja, pa se mora podržati i proveravanje CSS formata kao i elementi objektnog modela komponenti (DOM).
+\\
+
+\item[Fuzz testeri za proveru curenja memorije]
+Princip se zasniva na testiranju stanja memorije nakon svakog napravljenog objekta, pa se ponavlja dok se svi test slučajevi ne iscrpe. Mana ovog pristupa je suviše složena implementacija i mogućnost klasifikovanja lažnih pozitivnih test slučajeva.
+\\
+
+\item[Fuzz testeri za formate fajlova]
+Sve aplikacije imaju ulazne i izlazne vrednosti. Ova vrsta testera
+dinamički kreira različite loše formirane ulaze koji predstavljaju ulazne podatke aplikacije. Proverava se robusnost, drugim rečima da li su dobro 
+razdvojene ispravne i neispravne sekvence karaktera koje se mogu naći na ulazu.
+\end{description}
 
 \section{Implementacija Fuzz testera za C programe}
 \label{sec:implementacija_fuzz_testera}
@@ -76,31 +140,31 @@ Podržani su osnovni tipovi podataka: int, float, double i char. U svakom fajlu 
 Omogućena je i provera nizovima čiji su elementi osnovni tipovi podataka. Moguće je zadati maksimalan ili tačan broj elemenata. Izbor ovog broja se može prepustiti i slučajnom odabiru. Glavni razlog dodavanja ove mogućnosti je provera ispravnosti rada programa u zavisnosti od toga da li se koriste dinamički ili statički alocirani nizovi. \\
 
 Naš fuzz tester ima i test primere koji pokrivaju grupe stringova koje su specifične i često se upotrebljavaju. Obuhvaćene su sekvence karaktera koje predstavljaju datum, vreme, email adrese, putanje do fajlova. Ovo je implementirano kao demonstracija provere podacima koji nisu osnovni tipovi. \\
-
+ 
 Segment koda koji vrši odabir jednog test primera:
 \begin{verbatim}
-/* uzima se element po element vektora koji 
-čuva tip ulaznih podataka u zadatom redosledu */
-for(unsigned i = 0; i < testType.size(); i++)
-{
-    std::string choosed = testType.at(i);
-    
-    /* u zavisnosti od tipa podatka u fajl 
-    temp.txt se upisuje vrednost koja se dobija 
-    slučajnim izborom jednog od elemenata vektora */
-    if(choosed.compare("int") == 0)
-    {
-        /* vektor int_test se popunjava podacima iz fajla
-        int.txt u kome se cuvaju svi test primeri za int */
-        if(int_test.empty())
-            fill_vector("int"); 
-                 
-        int rand_int = rand() % int_test.size();
-        temp << QString::fromStdString(int_test.at(rand_int));
-        temp << " ";
-    ...
-\end{verbatim}
-
+ /* uzima se element po element vektora koji 
+ čuva tip ulaznih podataka u zadatom redosledu */
+ for(unsigned i = 0; i < testType.size(); i++)
+ {
+     std::string choosed = testType.at(i);
+     
+     /* u zavisnosti od tipa podatka u fajl 
+     temp.txt se upisuje vrednost koja se dobija 
+     slučajnim izborom jednog od elemenata vektora */
+     if(choosed.compare("int") == 0)
+     {
+         /* vektor int_test se popunjava podacima iz fajla
+         int.txt u kome se cuvaju svi test primeri za int */
+         if(int_test.empty())
+             fill_vector("int"); 
+                  
+         int rand_int = rand() % int_test.size();
+         temp << QString::fromStdString(int_test.at(rand_int));
+         temp << " ";
+     ...
+ \end{verbatim}
+ 
 Vrednosti korišćenog test primera kao i exit\_status programa se čuvaju u obliku izveštaja koji se potrebi može sačuvati.
 
 \subsection{Korisnički interfejs}
@@ -122,11 +186,9 @@ Izveštaj rada se prikazuje u posebnoj formi u kojoj se pored informacija o vred
 \section{Zaključak}
 \label{sec:zakljucak}
 %tekst zakljucka
-
+ 
 \addcontentsline{toc}{section}{Literatura}
 \appendix
 \bibliography{seminarski} 
-\bibliographystyle{plain}
-
-
+\bibliographystyle{plain} 
 \end{document}
