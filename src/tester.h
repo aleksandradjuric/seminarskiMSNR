@@ -7,6 +7,8 @@
 #include <QFileDialog>
 #include <QMessageBox>
 #include "viewreport.h"
+#include <iostream>
+#include <fstream>
 
 namespace Ui {
 class tester;
@@ -32,12 +34,27 @@ private slots:
     void on_btn_test_file_clicked();
     void on_btn_view_report_clicked();
     void on_btn_clear_list_clicked();
+    void on_btn_apply_num_element_clicked();
+    void on_btn_date_clicked();
+    void on_btn_time_clicked();
+    void on_btn_path_clicked();
+    void on_btn_start_clicked();
 
 private:
     Ui::tester *ui;
     void dodaj_u_listu(std::string);
+    void fill_vector(std::string);
     QStandardItemModel *model;
     viewReport *v;
+    std::string path_of_file;
+    std::vector<std::string>int_test;
+    std::vector<std::string>double_test;
+    std::vector<std::string>float_test;
+    std::vector<std::string>char_test;
+    std::vector<std::string>mail_test;
+    std::vector<std::string>date_test;
+    std::vector<std::string>time_test;
+    std::vector<std::string>path_test;
 };
 
 #endif // TESTER_H

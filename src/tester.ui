@@ -40,6 +40,9 @@
     </item>
     <item row="14" column="4">
      <widget class="QPushButton" name="btn_start">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="font">
        <font>
         <weight>75</weight>
@@ -313,7 +316,28 @@
      </widget>
     </item>
     <item row="6" column="4">
-     <widget class="QComboBox" name="cb_type_array"/>
+     <widget class="QComboBox" name="cb_type_array">
+      <item>
+       <property name="text">
+        <string>Int</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Double</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Float</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Char</string>
+       </property>
+      </item>
+     </widget>
     </item>
     <item row="12" column="3">
      <widget class="Line" name="line_4">
