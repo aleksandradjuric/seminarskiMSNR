@@ -133,15 +133,79 @@ void tester::on_btn_clear_list_clicked()
 
 void tester::fill_vector(std::string type)
 {
-    // TODO: make switch for all types
-    // location of file int.txt is folder build-msnr.....
-    std::ifstream f("int.txt");
     std::string tmp;
 
-    while(f)
+    if(type.compare("int") == 0)
     {
-        getline(f,tmp);
-        int_test.push_back(tmp);
+        std::ifstream f("Tests/int.txt");
+        while(f)
+        {
+            getline(f, tmp);
+            int_test.push_back(tmp);
+        }
+    }
+    else if(type.compare("float") == 0)
+    {
+        std::ifstream f("Tests/float.txt");
+        while(f)
+        {
+            getline(f, tmp);
+            float_test.push_back(tmp);
+        }
+    }
+    else if(type.compare("double") == 0)
+    {
+        std::ifstream f("Tests/double.txt");
+        while(f)
+        {
+            getline(f, tmp);
+            double_test.push_back(tmp);
+        }
+    }
+    else if(type.compare("char") == 0)
+    {
+        std::ifstream f("Tests/char.txt");
+        while(f)
+        {
+            getline(f, tmp);
+            char_test.push_back(tmp);
+        }
+    }
+    else if(type.compare("mail") == 0)
+    {
+        std::ifstream f("Tests/mail.txt");
+        while(f)
+        {
+            getline(f, tmp);
+            mail_test.push_back(tmp);
+        }
+    }
+    else if(type.compare("time") == 0)
+    {
+        std::ifstream f("Tests/time.txt");
+        while(f)
+        {
+            getline(f, tmp);
+            time_test.push_back(tmp);
+        }
+    }
+    else if(type.compare("date") == 0)
+    {
+        std::ifstream f("Tests/date.txt");
+        while(f)
+        {
+            getline(f, tmp);
+            date_test.push_back(tmp);
+        }
+    }
+    else if(type.compare("path") == 0)
+    {
+        std::ifstream f("Tests/path.txt");
+        while(f)
+        {
+            getline(f, tmp);
+            path_test.push_back(tmp);
+        }
     }
 }
 
@@ -152,6 +216,7 @@ void tester::on_btn_start_clicked()
     else
     {
         QFile file( "temp.txt" );
+        file.resize(0);
         if ( file.open(QIODevice::ReadWrite) )
         {
            QTextStream temp( &file );
@@ -168,10 +233,130 @@ void tester::on_btn_start_clicked()
                    temp << QString::fromStdString(int_test.at(rand_int));
                    temp << " ";
                }
-               // TODO: cover all types
+               else if(choosed.compare("float") == 0)
+               {
+                   if(float_test.empty())
+                       fill_vector("float");
+
+                   int rand_int = rand() % float_test.size();
+                   temp << QString::fromStdString(float_test.at(rand_int));
+                   temp << " ";
+               }
+               else if(choosed.compare("double") == 0)
+               {
+                   if(double_test.empty())
+                       fill_vector("double");
+
+                   int rand_int = rand() % double_test.size();
+                   temp << QString::fromStdString(double_test.at(rand_int));
+                   temp << " ";
+               }
+               else if(choosed.compare("char") == 0)
+               {
+                   if(char_test.empty())
+                       fill_vector("char");
+
+                   int rand_int = rand() % char_test.size();
+                   temp << QString::fromStdString(char_test.at(rand_int));
+                   temp << " ";
+               }
+               else if(choosed.compare("mail") == 0)
+               {
+                   if(mail_test.empty())
+                       fill_vector("mail");
+
+                   int rand_int = rand() % mail_test.size();
+                   temp << QString::fromStdString(mail_test.at(rand_int));
+                   temp << " ";
+               }
+               else if(choosed.compare("date") == 0)
+               {
+                   if(date_test.empty())
+                       fill_vector("date");
+
+                   int rand_int = rand() % date_test.size();
+                   temp << QString::fromStdString(date_test.at(rand_int));
+                   temp << " ";
+               }
+               else if(choosed.compare("time") == 0)
+               {
+                   if(time_test.empty())
+                       fill_vector("time");
+
+                   int rand_int = rand() % time_test.size();
+                   temp << QString::fromStdString(time_test.at(rand_int));
+                   temp << " ";
+               }
+               else if(choosed.compare("path") == 0)
+               {
+                   if(path_test.empty())
+                       fill_vector("path");
+
+                   int rand_int = rand() % path_test.size();
+                   temp << QString::fromStdString(path_test.at(rand_int));
+                   temp << " ";
+               }
+               else
+               {
+                   int rand_int;
+                   QString tmp = QString::fromStdString(choosed);
+                   QStringList array_num = tmp.split(" ");
+
+                   if(array_num.at(1).compare("int") == 0)
+                   {
+                       if(int_test.empty())
+                           fill_vector("int");
+
+                       for(int i = 0; i < array_num.at(2).toInt(); i++)
+                       {
+                           rand_int = rand() % int_test.size();
+                           temp << QString::fromStdString(int_test.at(rand_int));
+                           temp << " ";
+                       }
+                   }
+                   else if(array_num.at(1).compare("float") == 0)
+                   {
+                       if(float_test.empty())
+                           fill_vector("float");
+
+                       for(int i = 0; i < array_num.at(2).toInt(); i++)
+                       {
+                           rand_int = rand() % float_test.size();
+                           temp << QString::fromStdString(float_test.at(rand_int));
+                           temp << " ";
+                       }
+                   }
+                   else if(array_num.at(1).compare("double") == 0)
+                   {
+                       if(double_test.empty())
+                           fill_vector("double");
+
+                       for(int i = 0; i < array_num.at(2).toInt(); i++)
+                       {
+                           rand_int = rand() % double_test.size();
+                           temp << QString::fromStdString(double_test.at(rand_int));
+                           temp << " ";
+                       }
+                   }
+                   else
+                   {
+                       if(char_test.empty())
+                           fill_vector("char");
+
+                       for(int i = 0; i < array_num.at(2).toInt(); i++)
+                       {
+                           rand_int = rand() % char_test.size();
+                           temp << QString::fromStdString(char_test.at(rand_int));
+                           temp << " ";
+                       }
+                   }
+               }
            }
+           file.close();
+
         }
         else
             QMessageBox::warning(this, "warning", "File not opened", "try again");
     }
 }
+
