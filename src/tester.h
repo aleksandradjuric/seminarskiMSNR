@@ -9,6 +9,11 @@
 #include "viewreport.h"
 #include <iostream>
 #include <fstream>
+#include<unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <limits.h>
+#include <string.h>
 
 namespace Ui {
 class tester;
@@ -44,9 +49,12 @@ private:
     Ui::tester *ui;
     void dodaj_u_listu(std::string);
     void fill_vector(std::string);
+    std::string getStatus(int status);
     QStandardItemModel *model;
     viewReport *v;
     std::string path_of_file;
+    char *start_dir;
+    char *dir_of_file;
     std::vector<std::string>int_test;
     std::vector<std::string>double_test;
     std::vector<std::string>float_test;

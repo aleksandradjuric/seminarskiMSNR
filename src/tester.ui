@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>578</width>
-    <height>480</height>
+    <height>521</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -38,7 +38,7 @@
       </property>
      </widget>
     </item>
-    <item row="14" column="4">
+    <item row="15" column="4">
      <widget class="QPushButton" name="btn_start">
       <property name="enabled">
        <bool>false</bool>
@@ -68,7 +68,7 @@
       </property>
      </widget>
     </item>
-    <item row="14" column="5">
+    <item row="15" column="5">
      <spacer name="horizontalSpacer_2">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
@@ -91,6 +91,13 @@
       </property>
       <property name="text">
        <string>Float</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="4">
+     <widget class="QPushButton" name="btn_apply_num_element">
+      <property name="text">
+       <string>Apply</string>
       </property>
      </widget>
     </item>
@@ -123,7 +130,7 @@
       </property>
      </widget>
     </item>
-    <item row="13" column="3">
+    <item row="14" column="3">
      <spacer name="verticalSpacer">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
@@ -136,10 +143,10 @@
       </property>
      </spacer>
     </item>
-    <item row="8" column="4">
-     <widget class="QPushButton" name="btn_apply_num_element">
+    <item row="0" column="1">
+     <widget class="QLabel" name="label">
       <property name="text">
-       <string>Apply</string>
+       <string>Selected:</string>
       </property>
      </widget>
     </item>
@@ -162,158 +169,6 @@
        </size>
       </property>
      </spacer>
-    </item>
-    <item row="4" column="3">
-     <widget class="QPushButton" name="btn_char">
-      <property name="minimumSize">
-       <size>
-        <width>120</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>Char</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>Selected:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="4">
-     <widget class="QPushButton" name="btn_mail">
-      <property name="minimumSize">
-       <size>
-        <width>120</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>Mail</string>
-      </property>
-     </widget>
-    </item>
-    <item row="14" column="1">
-     <widget class="QPushButton" name="btn_clear_list">
-      <property name="text">
-       <string>Clear list</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1" rowspan="13" colspan="2">
-     <widget class="QListView" name="list_selected">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>300</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>250</width>
-        <height>16777215</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="4">
-     <widget class="QPushButton" name="btn_time">
-      <property name="text">
-       <string>Time</string>
-      </property>
-     </widget>
-    </item>
-    <item row="14" column="3">
-     <widget class="QPushButton" name="btn_view_report">
-      <property name="minimumSize">
-       <size>
-        <width>120</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>120</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>View report</string>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="3">
-     <widget class="Line" name="line_2">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <spacer name="horizontalSpacer_6">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="11" column="4">
-     <widget class="QPushButton" name="btn_test_file">
-      <property name="text">
-       <string>Import</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="4">
-     <widget class="QSpinBox" name="sp_num_element"/>
-    </item>
-    <item row="5" column="3">
-     <widget class="QLabel" name="label_2">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Array</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="3">
-     <widget class="QCheckBox" name="cb_infinity">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Infinity</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="3">
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>Num of element:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="4">
-     <widget class="Line" name="line">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
     </item>
     <item row="6" column="4">
      <widget class="QComboBox" name="cb_type_array">
@@ -339,19 +194,174 @@
       </item>
      </widget>
     </item>
-    <item row="12" column="3">
+    <item row="1" column="4">
+     <widget class="QPushButton" name="btn_mail">
+      <property name="minimumSize">
+       <size>
+        <width>120</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Mail</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="3">
+     <widget class="QPushButton" name="btn_char">
+      <property name="minimumSize">
+       <size>
+        <width>120</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Char</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" rowspan="14" colspan="2">
+     <widget class="QListView" name="list_selected">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>300</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="1">
+     <widget class="QPushButton" name="btn_clear_list">
+      <property name="text">
+       <string>Clear list</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="4">
+     <widget class="QPushButton" name="btn_time">
+      <property name="text">
+       <string>Time</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="3">
+     <widget class="QPushButton" name="btn_view_report">
+      <property name="minimumSize">
+       <size>
+        <width>120</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>120</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>View report</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="3">
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="4">
+     <widget class="QPushButton" name="btn_test_file">
+      <property name="text">
+       <string>Import</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="4">
+     <widget class="QSpinBox" name="sp_num_element"/>
+    </item>
+    <item row="1" column="0">
+     <spacer name="horizontalSpacer_6">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="7" column="3">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Num of element:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="3">
+     <widget class="QLabel" name="label_2">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Array</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="4">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="3">
+     <widget class="QCheckBox" name="cb_infinity">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Infinity</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="3">
      <widget class="Line" name="line_4">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
     </item>
-    <item row="12" column="4">
+    <item row="13" column="4">
      <widget class="Line" name="line_5">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
+    </item>
+    <item row="12" column="3">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Program name:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="4">
+     <widget class="QLineEdit" name="le_prg_name"/>
     </item>
    </layout>
   </widget>
