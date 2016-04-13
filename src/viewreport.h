@@ -21,6 +21,7 @@ private slots:
 
 private:
     Ui::viewReport *ui;
+    QStringList list;
 };
 
 #endif // VIEWREPORT_H

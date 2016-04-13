@@ -9,7 +9,7 @@
 #include "viewreport.h"
 #include <iostream>
 #include <fstream>
-#include<unistd.h>
+#include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <limits.h>
@@ -37,7 +37,6 @@ private slots:
     void on_btn_char_clicked();
     void on_btn_mail_clicked();
     void on_btn_test_file_clicked();
-    void on_btn_view_report_clicked();
     void on_btn_clear_list_clicked();
     void on_btn_apply_num_element_clicked();
     void on_btn_date_clicked();

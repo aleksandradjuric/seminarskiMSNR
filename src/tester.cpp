@@ -14,7 +14,7 @@ tester::tester(QWidget *parent) :
 
     v = new viewReport();
     connect(ui->btn_view_report, SIGNAL(clicked()), v, SLOT(printList()));
-
+    connect(ui->btn_start, SIGNAL(clicked()), v, SLOT(printList()));
 }
 
 tester::~tester()
@@ -122,11 +122,6 @@ void tester::on_btn_test_file_clicked()
         dir_of_file = strdup(path_of_file.substr(0,path_of_file.length()-9).c_str());
     }
 
-}
-
-void tester::on_btn_view_report_clicked()
-{
-    example = "example1->valid|example2->invalid|example3->valid";
 }
 
 void tester::on_btn_clear_list_clicked()
@@ -281,8 +276,11 @@ void tester::on_btn_start_clicked()
                 QTextStream log_stream(&log);
                 log.resize(0);
 
+
+                srand(time(NULL));
+                example.clear();
                 unsigned repeat_num = ui->sb_num_repeat->value();
-                for(unsigned counter=0; counter <repeat_num; counter++)
+                for(unsigned counter = 0; counter < repeat_num; counter++)
                 {
                     QFile file( "ulaz.txt" );
                     file.resize(0);
@@ -454,13 +452,44 @@ void tester::on_btn_start_clicked()
                     }
                     else
                         QMessageBox::warning(this, "Warning", "problem with ulaz.txt or izlaz.txt");
+
+                    if(counter == repeat_num - 1)
+                    {
+                       log.close();
+
+                        QFile log_fajl("log.txt");
+                        if(log_fajl.open(QIODevice::ReadOnly))
+                        {
+                            QTextStream ts(&log_fajl);
+
+                            for(unsigned i = 0; i < repeat_num; i++)
+                            {
+                                QString ulaz_linija = ts.readLine();
+                                QString izlaz_linija = ts.readLine();
+                                QString status_linija = ts.readLine();
+
+                                std::string pom1 = ulaz_linija.toStdString();
+                                std::string pom2 = pom1.substr(pom1.find_first_of(':') + 2, pom1.size());
+                                example.append(QString::fromStdString(pom2)).append("|");
+
+                                pom1 = izlaz_linija.toStdString();
+                                pom2 = pom1.substr(pom1.find_first_of(':') + 2, pom1.size());
+                                example.append(QString::fromStdString(pom2)).append("|");
+
+                                pom1 = status_linija.toStdString();
+                                pom2 = pom1.substr(pom1.find_first_of(':') + 2, pom1.size());
+                                example.append(QString::fromStdString(pom2).append(";"));
+                            }
+                            log_fajl.close();
+                        }
+                        else
+                            QMessageBox::warning(this, "Warning", "problem with log.txt");
+                    }
                 }
             }
             else
-
-            if(chdir(start_dir)<0)
-                QMessageBox::warning(this, "Warning", "problem with chdir");
-            log.close();
+                if(chdir(start_dir)<0)
+                    QMessageBox::warning(this, "Warning", "problem with chdir");
         }
     }
 }

@@ -32,24 +32,30 @@ void viewReport::printList()
 
     QStandardItemModel *model = new QStandardItemModel();
 
-    QStringList list = tester::example.split("|");
+    list = tester::example.split(";");
 
-    for(int i = 0; i < list.size(); i++)
+    for(int i = 0; i < list.size() - 1; i++)
     {
-        QStandardItem *test = new QStandardItem();
-        QStandardItem *valid = new QStandardItem();
+
+        QStandardItem *input = new QStandardItem();
+        QStandardItem *output = new QStandardItem();
+        QStandardItem *status = new QStandardItem();
+
         QString pom = list.at(i);
-        QStringList sub_list = pom.split("->");
+        QStringList sub_list = pom.split("|");
 
-        test->setData(sub_list.at(0), Qt::DisplayRole );
-        valid->setData(sub_list.at(1), Qt::DisplayRole );
+        input->setData(sub_list.at(0), Qt::DisplayRole );
+        output->setData(sub_list.at(1), Qt::DisplayRole );
+        status->setData(sub_list.at(2), Qt::DisplayRole );
 
-        model->setItem(i, 0, test);
-        model->setItem(i, 1, valid);
+        model->setItem(i, 0, input);
+        model->setItem(i, 1, output);
+        model->setItem(i, 2, status);
     }
     ui->tableView->setModel(model);
-    ui->tableView->setColumnWidth(0, 379);
-    ui->tableView->setColumnWidth(1, 379);
+    ui->tableView->setColumnWidth(0, 252);
+    ui->tableView->setColumnWidth(1, 252);
+    ui->tableView->setColumnWidth(2, 252);
 }
 
 void viewReport::on_btn_viewReport_save_clicked()
@@ -63,16 +69,14 @@ void viewReport::on_btn_viewReport_save_clicked()
     else
     {
         QString out = "";
-        QStringList list = tester::example.split("|");
 
-        for(int i = 0; i < list.size(); i++)
+        for(int i = 0; i < list.size() - 1; i++)
         {
             QString pom = list.at(i);
-            QStringList sub_list = pom.split("->");
-            out.append(sub_list.at(0));
-            out.append(": ");
-            out.append(sub_list.at(1));
-            out.append("\n");
+            QStringList sub_list = pom.split("|");
+            out.append("Input: ").append(sub_list.at(0)).append("\n");
+            out.append("Output: ").append(sub_list.at(1)).append("\n");
+            out.append("Exit status: ").append(sub_list.at(2)).append("\n\n");
         }
 
         QTextStream outStream(&f);
