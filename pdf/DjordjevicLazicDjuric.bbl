@@ -1,15 +1,15 @@
 \begin{thebibliography}{1}
 
+\bibitem{agilnirazvoj}
+Scott~W. Ambler.
+\newblock {\em {Agile Modeling: Effective Practices for eXtreme Programming and
+  the Unified Process}}.
+\newblock Wiley, 2002.
+
 \bibitem{fuzzing}
 Charles~Miller Ari~Takanen, Jared D.~Demott.
 \newblock {\em {Fuzzing for Software Security Testing and Quality Assurance}}.
 \newblock Artech House, 2008.
-
-\bibitem{agilnirazvoj}
-Saša Malkov.
-\newblock {Agilni razvoj, testovi}, 2013.
-\newblock on-line at:
-  \url{http://poincare.matf.bg.ac.rs/~smalkov/files/rs.r290.2015/public/Predavanja/Razvoj%20softvera.2015.05%20-%20Agilni%20razvoj,%20Testovi.pdf}.
 
 \bibitem{fuzzingBruteForce}
 Pedram~Amini Michael~Sutton, Adam~Greene.

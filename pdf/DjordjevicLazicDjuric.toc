@@ -3,12 +3,13 @@
 \contentsline {section}{\numberline {2}Vrste testiranja}{2}{section.2}
 \contentsline {subsection}{\numberline {2.1}Strategija crne kutije}{3}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Strategija bele kutije}{3}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Pore\IeC {\dj }enje strategija}{3}{subsection.2.3}
 \contentsline {section}{\numberline {3}Fuzz testiranje}{3}{section.3}
-\contentsline {subsection}{\numberline {3.1}Metode}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Metode}{4}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Tipovi}{4}{subsection.3.2}
-\contentsline {section}{\numberline {4}Implementacija Fuzz testera za C programe}{4}{section.4}
+\contentsline {section}{\numberline {4}Implementacija Fuzz testera za C programe}{5}{section.4}
 \contentsline {subsection}{\numberline {4.1}Zahtevi}{5}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Re\IeC {\v s}enja}{5}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Korisni\IeC {\v c}ki interfejs}{6}{subsection.4.3}
-\contentsline {section}{\numberline {5}Zaklju\IeC {\v c}ak}{6}{section.5}
-\contentsline {section}{Literatura}{7}{section.5}
+\contentsline {subsection}{\numberline {4.2}Re\IeC {\v s}enja}{6}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Korisni\IeC {\v c}ki interfejs}{7}{subsection.4.3}
+\contentsline {section}{\numberline {5}Zaklju\IeC {\v c}ak}{7}{section.5}
+\contentsline {section}{Literatura}{8}{section.5}
