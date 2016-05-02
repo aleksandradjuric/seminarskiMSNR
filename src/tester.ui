@@ -187,11 +187,6 @@
         <string>Float</string>
        </property>
       </item>
-      <item>
-       <property name="text">
-        <string>Char</string>
-       </property>
-      </item>
      </widget>
     </item>
     <item row="1" column="4">

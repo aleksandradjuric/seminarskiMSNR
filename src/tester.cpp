@@ -159,6 +159,7 @@ void tester::fill_vector(std::string type)
     }
     else if(type.compare("double") == 0)
     {
+
         std::ifstream f("Tests/double.txt");
         while(f)
         {
@@ -394,7 +395,7 @@ void tester::on_btn_start_clicked()
                                         temp << " ";
                                    }
                                }
-                               else if(array_num.at(1).compare("double") == 0)
+                               else
                                {
                                    if(double_test.empty())
                                         fill_vector("double");
@@ -406,18 +407,7 @@ void tester::on_btn_start_clicked()
                                         temp << " ";
                                    }
                                }
-                               else
-                               {
-                                   if(char_test.empty())
-                                        fill_vector("char");
 
-                                   for(int i = 0; i < array_num.at(2).toInt(); i++)
-                                   {
-                                        rand_int = rand() % char_test.size();
-                                        temp << QString::fromStdString(char_test.at(rand_int));
-                                        temp << " ";
-                                   }
-                               }
                            }
                        }
 
