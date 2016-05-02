@@ -1,0 +1,9 @@
+ulaz: mail123.12-aaa@mail.123 
+izlaz: Valid mail address
+exit status: exited normally
+ulaz: asdfgh@jkl.zxc 
+izlaz: Valid mail address
+exit status: exited normally
+ulaz: name.last-name@mail.com 
+izlaz: Valid mail address
+exit status: exited normally

@@ -1,0 +1,482 @@
+\documentclass[a4paper]{report}
+
+\usepackage[T2A]{fontenc} % enable Cyrillic fonts
+\usepackage[utf8x,utf8]{inputenc} % make weird characters work
+\usepackage[serbian]{babel}
+%\usepackage[english,serbianc]{babel}
+\usepackage{amssymb}
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\newcommand{\odgovor}[1]{\textcolor{blue}{#1}}
+
+\begin{document}
+
+\title{Generisanje test primera za programe u C-u korišcenjem Fuzz tehnike\\ \small{Ana Dordević, Mladen Lazić, Aleksandra Durić}}
+
+\maketitle
+\tableofcontents
+
+
+\chapter{Prvi recenzent \odgovor{--- ocena: 2} }
+\section{O čemu rad govori?}
+Rad počinje osvrtom na bitnu ulogu koju testiranje ima u današnjem razvoju softvera i objašnjenjem zašto je to tako. Zatim se pažnja posvećuje vrstama testiranja i podeli na testiranje crnom,belom i sivom kutijom. Posebno se govori o Fuzz tehnici, njenim metodima i tipovima Fuzz testera. Na kraju se govori o samom načinu na koji je implementiran tester uz prikaz grafičkog interfejsa.  
+
+\section{Krupne primedbe i sugestije}
+Po meni je rad sjajan i veće mane se ne mogu naći. Dopada mi se što se čitalac lagano uvodi u temu opštom pričom, a zatim se u nastavku ide u detalje u dovoljnoj meri. 
+
+\section{Sitne primedbe}
+U poglavlju 2 na početku drugog pasusa je druga rečenica nejasna, tj. njen kraj. 
+
+\odgovor{
+Promenjen je kraj rečenice, pretpostavili smo da je ono što je nejasno bila upotreba reči sistem koja se nigde drugde ne pominje.} \\
+
+U poglavlju 2.1 piše "strategija" umesto "strategije".
+
+\odgovor {
+Ispravljena je slovna greška.} \\
+
+Tabela 3 bi mogla da se nalazi u sklopu poglavlja 2, a ne poglavlja 3.
+
+\odgovor {
+Tabela se odnosi na poglavlje 2.3 , tu se referiše na nju i tu je u .tex dokumentu smeštena. Na mesto tabele ne možemo da utičemo, Latex je sam smestio na početak sledeće strane.
+}
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Rad odlično odgovara na zadatu temu. 
+\item Da li je nešto važno propušteno?\\
+Ništa bitno nije propušteno.
+\item Da li ima suštinskih grešaka i propusta?\\
+Nema.
+\item Da li je naslov rada dobro izabran?\\
+Naslov rada u jednoj rečenici dobro prikazuje šta se u radu obradjuje.
+\item Da li sažetak sadrži prave podatke o radu?\\
+Sažetak je dobro napisan, kao kratak pregled sadržaja rada. Moglo bi se malo više pažnje posvetiti samoj implementaciji.
+\item Da li je rad lak-težak za čitanje?\\
+Rad je lagan za čitanje uprkos složenoj temi.
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Za razumevanje teksta nije potrebni preterano veliko predznanje.
+\item Da li je u radu navedena odgovarajuća literatura?\\
+Jeste.
+\item Da li su u radu reference korektno navedene?\\
+Jesu.
+\item Da li je struktura rada adekvatna?\\
+Jeste.
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Svi elementi se nalaze u radu.
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Jesu. Slika prikazuje izgled korisničog interfejsa implementacije dok tabela prikazuje poredjenje načina testiranja.
+\end{enumerate}
+
+\section{Ocenite sebe}
+U samu temu testiranja sam malo upućena, dok sam u Fuzz testiranje neupućena.
+
+
+\chapter{Drugi recenzent \odgovor{--- ocena: 2} }
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+
+Rad se bavi vrstama i strategijama testiranja prilikom razvoja softvera stavljajući poseban akcenat na Fuzz testiranje kao najpovoljniji pristup kada je potrebno proveriti ulazne podatke. Rad je podeljen na 2 dela gde se u prvom uopšteno opisuju strategije testiranja i njihovo poredjenje, metode i tipovi fuzz testera, dok je u drugom delu dato objašnjenje implementacije autorovog Fuzz testera za C programe. 
+
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+Seminarski je vrlo dobro napisan i ja nemam nijednu krupniju primedbu niti sugestiju koju bih dodao ili kojom bih nešto izmenio. Možda jedina sugestija bi bila da su stavili neki izlaz testiranja  iz njihovog softvera čisto da bi čitalac imao uvid kako to izgleda. \\
+\odgovor {
+Dodata je slika izveštaja testiranja.
+}
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+U sekciji 3.1 se nalazi reč "byte", a pošto je tekst na srpskom poželjnije bi bilo "bajt".To isto važi i za string (niska) mada ovo manje upada u oči. 
+
+\odgovor {
+Prevedene su reči napisane na engleskom.
+}
+\\
+
+U sekciji 4.1 se javlja korišćenje reči "input", a poželjnije bi bilo "ulaz". 
+
+\odgovor{
+Sva pojavljivanja reči input zamenjena su sa reči ulaz.
+}
+\\
+
+U sekciji 4.2 ista sugestija kao u sekciji 4.1.
+\\
+U zaključku postoji štamparska greška "interfejsu", a treba "interfejsa". 
+
+\odgovor {
+Ispravljena je slovna greška.
+}
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Rad odgovara na zadatu temu jer nas u početku postupno uvodi u temu ,a potom nam daje konkretne informacije vezane za naziv teme. 
+\item Da li je nešto važno propušteno?\\
+Ništa važno nije propušteno, sve je lepo obrazloženo i objašnjeno. 
+\item Da li ima suštinskih grešaka i propusta?\\
+Nema.
+\item Da li je naslov rada dobro izabran?\\
+Naslov rada je dobro izabran.
+\item Da li sažetak sadrži prave podatke o radu?\\
+Sažetak uvodi čitaoca u temu i strukturu rada tako da sadrži prave informacije.
+\item Da li je rad lak-težak za čitanje?\\
+Rad je veoma lak i zanimljiv za čitanje.
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Potrebno je osnovno predznanje u pisanju programa i grešaka koje se najčešće mogu javiti.
+\item Da li je u radu navedena odgovarajuća literatura?\\
+U radu jeste navedena odgovarajuća literatura.
+\item Da li su u radu reference korektno navedene?\\
+Reference su korektno navedene jer se slažu sa uputstvima datim na profesorovim predavanjima.
+\item Da li je struktura rada adekvatna?\\
+Struktura je adekvatna jer sadrži sve obavezne delove koje jedan seminarski treba da ima (apstrakt, sadržaj, uvod, razradu, pasuse, zaključak, literaturu).
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Broj strana je odgovarajući, rad poseduje slike i tabelu.
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Tabela je funkcionalna i adekvatna jer nam lepo prikazuje odnos i karakteristike strategija testiranja, dok nam slika dočarava izgled korisničkog interfejsa tako da je i ona adekvatna i funkcionalna.
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+U ovoj oblasti sam srednje upućen jer mi je poznata tehnika fuzz testiranja mada ne u meri u kojoj je opisana u radu.
+
+
+\chapter{Treći recenzent \odgovor{--- ocena: 4} }
+\section{O čemu rad govori?}
+
+\odgovor {Rad navodi značaj, faze i različite vrste testiranja softvera. Dalje je reč o tri osnovne strategije koje se koriste pri testiranju ispravnosti softvera, njihovim specifičnostima i međusobnim razlikama. Akcenat je na samom \textit{Fuzz} testiranju, metodama i tipovima \textit{Fuzz} testera. Na kraju je dat osvrt na način rada implementiranog \textit{Fuzz} testera od strane autora, za programe pisane u C-u, sa prikazom korisničkog interfejsa i dela implementacije. }
+
+
+\section{Krupne primedbe i sugestije}
+\odgovor {Eventualno još neka rečenica u sažetku, inače bez ikakvih primedbi.} 
+
+\odgovor {
+Dodate su dve rečenice u apstraktu.
+}
+\section{Sitne primedbe}
+
+\odgovor {
+U uvodu bi trebao da ide zarez između \textit {dobijaju} i  \textit {najzastupljenije}:
+''Zbog prednosti koje se dobijaju najzastupljenije i trenutno najpopularnije metodologije razvoja promovišu ...''  } 
+
+\odgovor {
+Smatramo da je to jedna celina i da se ne treba razdvajati zarezom.
+} \\
+
+\odgovor {U prvom pasusu 2. poglavlja:
+\textit {Veoma su zastupljeni} umesto ''Veoma zastupljeni su i testovi prihvatljivosti... '' } 
+
+\odgovor {
+Popravljen je redosled reči.
+} \\
+
+\odgovor {3. poglavlje, 1. pasus:
+definisati umesto definitisati } 
+
+\odgovor {
+Greška je popravljena.
+} \\
+
+\odgovor {bajt umesto byte (poglavlje 3.1), ulaz umesto input (poglavlje 4.1 i na još par mesta). Nema potrebe pisati ove reči na engleskom } 
+
+\odgovor {
+Reči su zamenjene.
+} \\
+
+\odgovor { 4.2 poglavlje: po potrebi umesto potrebi } 
+
+\odgovor {
+Dodat je predlog.
+} \\
+
+\odgovor {Eventualno bih u opisu implementacije naglasila delove korisničkog interfejsa od ostatka teksta: \\
+Klikom na dugme \textit{učitaj} i klikom na dugme \textit{sačuvaj} umesto ''Klikom na dugme učitaj i klikom na dugme sačuvaj.'' } 
+
+\odgovor {
+Naglašene su navedene reči.
+}
+
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+\odgovor {Rad odlično odgovara na temu koja je zadata.}
+
+\item Da li je nešto važno propušteno?\\
+\odgovor {Rekla bih da nije, rad je kompletan u svakom smislu.}
+
+\item Da li ima suštinskih grešaka i propusta? \\
+\odgovor {Nikakvih suštinskih grešaka nema u radu.}
+
+\item Da li je naslov rada dobro izabran?\\
+\odgovor {Naslov rada odgovara onome o čemu rad govori. }
+
+\item Da li sažetak sadrži prave podatke o radu?\\
+\odgovor {Sažetak odgovara sadržaju rada.}
+
+\item Da li je rad lak-težak za čitanje?\\
+\odgovor {Rad je vrlo lepo napisan, sasvim se lako čita. Odlično su uveli u priču i dobro objasnili suštinu. }
+
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri? \\
+\odgovor {Mislim da nije potrebno neko predznanje, bar ne za studente koji slušaju ovaj kurs. }
+
+\item Da li je u radu navedena odgovarajuća literatura? \\
+\odgovor {Literatura je adekvatna. Kombinovali su više izvora i pozivali se na njih u tekstu.}
+
+\item Da li su u radu reference korektno navedene?\\
+\odgovor {Reference su u redu, svaka slika i tabela su dobro referisane, kao i odgovarajuća literatura. }
+
+\item Da li je struktura rada adekvatna?\\
+\odgovor {Tekst je dobro strukturiran, sekcije su adekvatno podeljene. }
+
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+\odgovor {Rad sadrži sve što je propisano uslovima.}
+
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+\odgovor {Slika korisničkog interfejsa se samostalno tumači i čita i  odgovarajuće je rezolucije. Tabela je odgovarajuća, podaci su dobro organizovani, dobro prikazuje razlike između različitih strategija pri testiranju softvera. }
+
+\end{enumerate}
+
+\section{Ocenite sebe} 
+\odgovor {Srednje sam upućena u temu.}
+
+
+\chapter{Četvrti recenzent \odgovor{--- ocena: 3} }
+
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+
+Rad se bavi testiranjem softvera i na vrlo lep i razumljiv način opisuje načine testiranja kroz različite strategije, a potom detaljno opisuje jednu od tehnika, Fuzz tehniku. Opisan je algoritam koji je implementiran, kao i njegovo korišćenje i opis grafičkog interfejsa.
+
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+
+Rad mi se mnogo svideo, čak me je zaintrigirao da propratni softver koji je napravljen isprobam. Jedino što bi moglo da se izmeni je da se u delovima \textit{Uvod} i \textit{Vrste testiranja} podeli u pasuse prema logičnim celinama, jer je ovako pomalo zamorno pratiti šta su zaokružene misli, teško je pronaći nešto što je prethodno pročitano, a i vizuelno bi bilo lepše razdvojiti u manje pasuse. 
+
+\odgovor {
+Uvod je podeljen na logičke celine.
+Pasus vrste testiranja je podeljen na celine.
+}
+
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+
+\begin{itemize}
+
+\item u delu 3.1 možda bi trebalo staviti \textit{Random metodu} na prvo mesto, jer njen opis kreće sa \textit{"Ova metoda je najmanje efikasna."} 
+
+\odgovor{
+Random metoda je prva navedena.
+}\\
+
+\item takođe u delu 3.1 u opisu \textit{Random metode} je u prvoj rečenici rečeno da je ona najmanje efikasna, a u trećoj rečenici da se njom često identifikuju slabosti kritičnih delova softvera, što deluje malo kontradiktorno; možda bi moglo nekako drugačije da se sroči 
+
+\odgovor{
+Smatramo da rečenica nije kontradiktorna, zapravo baš je istaknuto da pored toga što je najneefikasnija, pomoću nje se otkriva veliki broj grešaka.
+}\\
+
+
+\item u delu 3.2 u prvom redu u zagradi fali . nakon eng 
+
+\odgovor{
+Popravljena je greška.
+}\\
+
+\item u delu 3.2 \textit{"Većina protokola ima jednostavnu autentifikaciju ili ona uopšte ne postoji."} je možda bolje sa još jednim 'ili' - "Većina protokola ima \textbf{ili} jednostavnu autentifikaciju ili ona uopšte ne postoji." 
+
+\odgovor{
+Predlog je prihvaćen.
+}\\
+
+\item u delu 3.2 u prvom pasusu se pominju \textit{check sum bitovi} koje bi nakon toga bar u zagradu bilo dobro napisati s obzirom da nisu sveopšte poznata stvar.
+
+\odgovor{
+Dodata je reference ka literaturi u kojoj se može naći objašnjenje.
+}\\
+
+\item u delu 4.2 u poslednjoj rečenici piše \textit{"se potrebi"} umesto "se \textbf{po} potrebi" 
+
+\odgovor{
+Ova greška je ispravljena.
+}\\
+
+\item u delu 4.3 rečenica koja se odnosi na GUI \textit{"Pokušali smo da ga napravimo što intuitivnije i jednostavnije."} je nepotrebna, pošto se GUI uvek pravi tako da bude što intuitivniji i jednostavniji 
+
+\odgovor{
+Prilikom implementacije je akcenat stavljen na to da ne bude potrebno nikakvo dodatno objašnjenje i zato je posebno istaknuto. Iako bi u praksi trebalo težiti tome da svi interfejsi budu intuitivni, to često nije slučaj. Ovom rečenicom smo hteli da istaknemo dobru osobinu našeg interfejsa.
+}\\
+
+\item u \textit{Zaključku} je malo previše pisano šta je rađeno u seminarskom "Predstavljene su vrste testiranja..." i "Drugi deo je posvećen...", umesto  da se piše šta je neki zaključak seminarskog; međutim napisano je i ono što treba da bude u zaključku, a to je "Uočeno je da je Fuzz testiranje najpovoljniji pristup..." i "Ostavljeno je prostora za dalja unapredenja...", tako da je, po mom mišljenju, ponavljanje šta je pređeno primerenije sažetku i uvodu i bolje ga je izbaciti iz zaključka 
+
+\odgovor{
+Smatramo da je u zaključku dobro navesti šta je urađeno u radu jer na taj način se zaokružuje celina onoga što je urađeno i čitaocu još jednom ističe po čemu rad treba pamtiti. U svakom slučaju, predlog je delimično prihvaćen.
+}\\
+
+
+\end{itemize}
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Da, u potpunosti.
+
+\item Da li je nešto važno propušteno?\\
+Ne.
+
+\item Da li ima suštinskih grešaka i propusta?\\
+Ne.
+
+\item Da li je naslov rada dobro izabran?\\
+Da, mada ako je predugačak, možda bi i "Generisanje test primera za softver korišćenjem Fuzz tehnike" bilo primereno temi.
+
+\item Da li sažetak sadrži prave podatke o radu?\\
+Da.
+
+\item Da li je rad lak-težak za čitanje?\\
+Rad je razumljiv i lak za čitanje, a pritom i vrlo zanimljiv.
+
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Ne. Potrebno je vrlo malo predznanje o programiranju, ali u zanemarljivoj meri, razumeo bi ga čak i neko van struke.
+
+\item Da li je u radu navedena odgovarajuća literatura?\\
+Da.
+
+\item Da li su u radu reference korektno navedene?\\
+Da.
+
+\item Da li je struktura rada adekvatna?\\
+Da.
+
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Da.
+
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Da.
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+
+U ovu oblast sam veoma upućena s obzirom da studiram informatiku, a testiranje je jedan od najbitnijih faza programiranja. Sa fuzz tehnikom sam bila upoznata, ali ne i sa nazivom, tako da sam i nešto novo naučila.
+
+\chapter{Peti recenzent \odgovor{--- ocena: 4} }
+
+\section{O čemu rad govori?}
+Tema rada je testiranje programa. Upoznajemo se sa osnovnim tehnikama(bela, siva, crna kutija) nakon kojih se prelazi na naprednu tehniku fuzz pristup. Fuzz tehnika je bazirana na crnoj i sivoj kutiji. Osnovne metore i tipovi ove tehnike. Drugi deo je posvećen softverskom delu gde je reč o funkcionisanju softvera.
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+
+\section{Krupne primedbe i sugestije}
+Fuzz testeri za web aplikacije, Nije jasno da li su slabosti i SQL upiti i XML ili XML se odnosi na nešto drugo. Poželjno bi bilo da se malo pojasni rečenica.
+
+\odgovor{
+Rečenica je sada jasno napisana, slabosti podrazumevaju SQL upite i definisanje XML struktrura podataka.
+} \\
+
+
+U teoriskom delu, gde je pisano o tehnikama testiranja, autori su koristili treće lice. Kada je počeo deo o programu prešli su na prvo lice. Rad treba biti konzistentan. 
+
+\odgovor{
+Slažemo se da rad treba biti konzistentan, međutim u prvom delu rada se piše u trećem licu jer se navode činjenice i neki već definisani pojmovi, a u drugom delu se govori o našoj implementaciji pa zato smatramo da način pisanja treba da ostane isti.
+}
+
+
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+
+\section{Sitne primedbe}
+3.1 Metode, fuzz testiranje grubom silom, tekst je na srpskom tako da treba pisati ili bajt ili (eng. byte)
+
+\odgovor{
+Reči su zamenjene.
+} \\
+
+3.2 Tipovi, Udaljeni fuzz testeri, check sum. Bitovi provere sume/zbira. Takođe, koliko sam uspeo da nađem, checksum se piše zajedno. 
+
+\odgovor{
+Dodata je referenca gde se objašnjava korišćenje pojma checksum bitova.
+Naziv termina je ispravljen. 
+}\\
+
+
+4.1 Zahtevi, 8. red input. Mešanje engleskih i srpskih termina. Već na početku sledeće rečenice piše "ulaz". U 4.2 se ovo ponavlja na samom početku.
+
+\odgovor{
+Greška je ispravljena.
+}\\
+
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Rad je veoma dobro napisan i u potpunosti odgovara na zadatu temu.
+\item Da li je nešto važno propušteno?\\
+Sve potrebno da se čitaoc upozna sa ovom oblasti je pokriveno.
+\item Da li ima suštinskih grešaka i propusta?\\
+Ne postoje nikakve greške niti propusti.
+\item Da li je naslov rada dobro izabran?\\
+Naslov rada je u skladu sa temom i govori tačno ono o čemu je i pisano.
+\item Da li sažetak sadrži prave podatke o radu?\\
+Sažetak je dobro napisan.
+\item Da li je rad lak-težak za čitanje?\\
+Veoma je lak i tečan ta čitanje.
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Tekst je veoma dobro napisan i jednostavan za čitanje, lako se razume.
+\item Da li je u radu navedena odgovarajuća literatura?\\
+Literaturu koju su kolege navele nisam uspeo da nađem javno dostupne. 
+\item Da li su u radu reference korektno navedene?\\
+Samo prve 3 strane imaju reference na litaraturu, konkretno fuzz metode i tipovi nisu pokrivenu referencom na literaturu. Reference na sliku i tabelu rade korektno.
+\item Da li je struktura rada adekvatna?\\
+Struktura rada je adekvatna.
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Sadrži sve potrebne elemente.
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Nema zamerki vezanih za slike i tabele.
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+ d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+
+
+\chapter{Dodatne izmene}
+%Ovde navedite ukoliko ima izmena koje ste uradili a koje vam recenzenti nisu tražili. 
+\odgovor{
+Prilikom navođenja karakterističnih niski koje se mogu testirati, umesto mail napisano je mail adresa.
+}
+\end{document}
+
+

@@ -1,0 +1,3 @@
+ulaz: djshfdfjh 0.0 
+izlaz: 0.000000
+exit status: exited normally

@@ -11,5 +11,5 @@
 \contentsline {subsection}{\numberline {4.1}Zahtevi}{5}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Re\IeC {\v s}enja}{6}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Korisni\IeC {\v c}ki interfejs}{7}{subsection.4.3}
-\contentsline {section}{\numberline {5}Zaklju\IeC {\v c}ak}{7}{section.5}
+\contentsline {section}{\numberline {5}Zaklju\IeC {\v c}ak}{8}{section.5}
 \contentsline {section}{Literatura}{8}{section.5}
