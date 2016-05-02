@@ -1,0 +1,20 @@
+././././././folder/.
+/
+////
+example/path/1.c
+/?===abcdef/111111.c
+/bin/12.sh
+/add/sfdsf?sdffd/dsf
+/%%%%%%%folder%%%%%%%%/dir/file/
+///////////////.////././././../something.txt
+././\\\\\dir1/dir2/dir3/
+tester/fuzzer/examples/int/int.c
+.././.././/dir1/dir2/dir3 d/12.cpp
+/home/
+src/example/Makefile
+Makefile
+/home/Fuzz-tester/
+1.c
+15/15/15/2.txt
+15\/1/
+dir/8/8/89.1/txt.txt
