@@ -1,0 +1,40 @@
+ulaz: %s 0.00000000 
+izlaz: Zbir brojeva 0.000000 i -510724542607576486212382689853440.000000 je -510724542607576486212382689853440.000000 .
+
+exit status: exited normally
+ulaz: -14.259358415 0.0  
+izlaz: Zbir brojeva -14.259358 i 0.000000 je -14.259358 .
+
+exit status: exited normally
+ulaz: 3.5698741214e+12 12.5 
+izlaz: Zbir brojeva 3569874108416.000000 i 12.500000 je 3569874108416.000000 .
+
+exit status: exited normally
+ulaz: 5.4039147864e+13 14.255665989 
+izlaz: Zbir brojeva 54039148494848.000000 i 14.255666 je 54039148494848.000000 .
+
+exit status: exited normally
+ulaz: %s \\\\\\\n  
+izlaz: Zbir brojeva 0.000000 i 0.000000 je 0.000000 .
+
+exit status: exited normally
+ulaz:  -18.00001 
+izlaz: Zbir brojeva -18.000010 i 55849.375000 je 55831.375000 .
+
+exit status: exited normally
+ulaz: 12.2  
+izlaz: Zbir brojeva 12.200000 i -42110141071360.000000 je -42110141071360.000000 .
+
+exit status: exited normally
+ulaz: 1.1754943508e-38 14 
+izlaz: Zbir brojeva 0.000000 i 14.000000 je 14.000000 .
+
+exit status: exited normally
+ulaz: 0.376739501953125 13.3 
+izlaz: Zbir brojeva 0.376740 i 13.300000 je 13.676740 .
+
+exit status: exited normally
+ulaz: % 693.123 
+izlaz: Zbir brojeva 0.000000 i 1803501274598435442393088.000000 je 1803501274598435442393088.000000 .
+
+exit status: exited normally

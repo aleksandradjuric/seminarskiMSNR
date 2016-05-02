@@ -1,0 +1,34 @@
+ulaz: 21:14:cc 
+izlaz: Invalid time!
+exit status: exited normally
+ulaz:  
+izlaz: Invalid time!
+exit status: exited normally
+ulaz: 12:20:35 
+izlaz: Sati: 12 	Minuta: 20 	Sekundi: 35
+
+exit status: exited normally
+ulaz:  
+izlaz: Invalid time!
+exit status: exited normally
+ulaz: %d%c:%f%c:%d%d 
+izlaz: Invalid time!
+exit status: exited normally
+ulaz: 12:15:89 
+izlaz: Invalid time!
+exit status: exited normally
+ulaz: 10:23:87 
+izlaz: Invalid time!
+exit status: exited normally
+ulaz: 00:12:36 
+izlaz: Sati: 00 	Minuta: 12 	Sekundi: 36
+
+exit status: exited normally
+ulaz: 23:18:14 
+izlaz: Sati: 23 	Minuta: 18 	Sekundi: 14
+
+exit status: exited normally
+ulaz: 00:12:36 
+izlaz: Sati: 00 	Minuta: 12 	Sekundi: 36
+
+exit status: exited normally

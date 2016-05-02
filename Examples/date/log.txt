@@ -1,0 +1,40 @@
+ulaz: 04.00.2010 
+izlaz: Invalid date !
+
+exit status: exited normally
+ulaz: 17-04-2007 
+izlaz: Dan: 17 	Mesec: 04 	Godina: 2007
+
+exit status: exited normally
+ulaz: 13.10.1991 
+izlaz: Dan: 13 	Mesec: 10 	Godina: 1991
+
+exit status: exited normally
+ulaz: 17.04.2007 
+izlaz: Dan: 17 	Mesec: 04 	Godina: 2007
+
+exit status: exited normally
+ulaz: \n\n.\n\n.\n\n\n\n 
+izlaz: Invalid date !
+
+exit status: exited normally
+ulaz: 30.18.1987 
+izlaz: Invalid date !
+
+exit status: exited normally
+ulaz: 17.20.18 
+izlaz: Invalid date !
+
+exit status: exited normally
+ulaz: 12.bb.1985 
+izlaz: Invalid date !
+
+exit status: exited normally
+ulaz: a1.b3.c4d5 
+izlaz: Invalid date !
+
+exit status: exited normally
+ulaz: 22.05.2007 
+izlaz: Dan: 22 	Mesec: 05 	Godina: 2007
+
+exit status: exited normally

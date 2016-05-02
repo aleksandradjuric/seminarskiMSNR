@@ -1,0 +1,1 @@
+Suma elemenata niza je: 0.000000
